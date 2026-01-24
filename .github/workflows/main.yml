@@ -1,4 +1,4 @@
-name: RDP_BELAJAR_BERSAMA22
+name: RDP24
 
 on:
   workflow_dispatch:
@@ -52,7 +52,7 @@ jobs:
           
           echo "RDP_CREDS=User: RDP24 | Password: $password" >> $env:GITHUB_ENV
           
-          if (-not (Get-LocalUser -Name "RDP")) {
+          if (-not (Get-LocalUser -Name "RDP24")) {
               Write-Error "User creation failed"
               exit 1
           }
@@ -103,7 +103,7 @@ jobs:
           Write-Host "`n=== RDP ACCESS ==="
           Write-Host "http://www.youtube.com/@BELAJAR_BERSAMA22"
           Write-Host "Address: $env:TAILSCALE_IP"
-          Write-Host "Username: RDP"
+          Write-Host "Username: RDP24"
           Write-Host "Password: $(echo $env:RDP_CREDS)"
           Write-Host "==================`n"
           
